@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web">
+    <link rel="stylesheet" href="../css/home.css">
+
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-logo" href="#">
+            <img src="../fotos/logo.svg" alt="YB Repairs logo">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Hoofdnavigatie">
+            <a href="#">Home</a>
+            <a href="#diensten">Diensten</a>
+            <a href="#over">Over ons</a>
+            <a class="nav-button" href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-video-bg" aria-hidden="true">
+                <video autoplay muted loop playsinline>
+                    <source src="../fotos/background video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="hero-text">
+                <p class="hero-kicker">Websites & PC's</p>
+                <h1>Voor ondernemers.</h1>
+                <p class="hero-intro">
+                    Wij bouwen professionele websites en betrouwbare pc's op maat.
+                    Van snelle reparatie tot complete setup: strak geregeld, duidelijk uitgelegd.
+                </p>
+
+                <div class="hero-services" id="diensten">
+                    <article>
+                        <span class="material-symbols-outlined service-symbol" aria-hidden="true">web</span>
+                        <h2>Websites op maat</h2>
+                        <p>Professionele websites die resultaat opleveren.</p>
+                    </article>
+                    <article>
+                        <span class="service-icon service-icon-pc" aria-hidden="true"></span>
+                        <h2>PC's op maat</h2>
+                        <p>Krachtige, betrouwbare pc's voor elke ondernemer.</p>
+                    </article>
+                </div>
+
+                <div class="hero-benefits">
+                    <span>Persoonlijk advies</span>
+                    <span>Montage & service</span>
+                    <span>Betrouwbaar & snel</span>
+                </div>
+            </div>
+
+            <div class="hero-pc" aria-hidden="true">
+                <img src="../fotos/chatgpt-pc-only.svg" alt="">
+            </div>
+
+        </section>
+
+        <section class="flow-panel" id="flowPanel">
+            <div class="flow-content">
+                <p class="hero-label">Hoe het werkt</p>
+                <h2>Van probleem naar werkende pc.</h2>
+                <div class="flow-steps">
+                    <article>
+                        <span>01</span>
+                        <h3>Vertel wat je nodig hebt</h3>
+                        <p>Je stuurt je klacht, wens of budget door. Dan kijken we wat logisch is.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Diagnose en advies</h3>
+                        <p>Je krijgt duidelijk advies voordat er onderdelen worden besteld of vervangen.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Repareren of bouwen</h3>
+                        <p>De pc wordt netjes opgebouwd, getest en klaar gezet voor gebruik.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a class="footer-logo" href="#">
+                <img src="../fotos/logo.svg" alt="YB Repairs logo">
+                <span>YB Repairs</span>
+            </a>
+            <p>Betrouwbare hulp voor pc builds, upgrades, onderhoud en reparaties.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#diensten">Diensten</a>
+            <a href="#diensten">Website op maat</a>
+            <a href="#over">Over ons</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <span>info@ybrepairs.nl</span>
+            <span>PC service op afspraak</span>
+        </div>
+    </footer>
+
+    <script src="../js/home.js"></script>
+</body>
+</html>
