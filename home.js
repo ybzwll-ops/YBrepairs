@@ -1,16 +1,6 @@
-/*
-   COMPRESSION — TM-620
-   https://templatemo.com/tm-620-compression
-   Design: TemplateMo
-   
-   Scroll reveal with IntersectionObserver
-   + 3-second setTimeout fallback for iframe preview contexts
-*/
-
 (function () {
     'use strict';
 
-    // Scroll reveal for mobile stacked layout
     const panels = document.querySelectorAll('article.panel');
 
     function revealPanel(el) {
@@ -18,9 +8,10 @@
         el.style.transform = 'translateY(0)';
     }
 
-    // Only apply scroll reveal in mobile (stacked) layout
     function initScrollReveal() {
-        if (window.innerWidth > 900) return;
+        if (window.innerWidth > 900) {
+            return;
+        }
 
         panels.forEach(function (panel) {
             panel.style.opacity = '0';
@@ -43,7 +34,6 @@
             });
         }
 
-        // 3-second fallback for iframe preview contexts
         setTimeout(function () {
             panels.forEach(function (panel) {
                 revealPanel(panel);
@@ -51,14 +41,12 @@
         }, 3000);
     }
 
-    // Close modal on Escape key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && window.location.hash) {
             window.location.hash = '';
         }
     });
 
-    // Close modal when clicking overlay background
     document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
         overlay.addEventListener('click', function (e) {
             if (e.target === overlay) {
@@ -67,10 +55,9 @@
         });
     });
 
-    // Init
     document.addEventListener('DOMContentLoaded', initScrollReveal);
 })();
- 
+
 (function () {
     const textarea = document.getElementById('message');
     const counter = document.getElementById('char-count');
@@ -79,7 +66,20 @@
         return;
     }
 
-    textarea.addEventListener('input', () => {
+    textarea.addEventListener('input', function () {
         counter.textContent = textarea.value.length + ' / 1000';
     });
 })();
+
+function showTab(id, btn) {
+    document.querySelectorAll('.section').forEach(function (section) {
+        section.classList.remove('show');
+    });
+
+    document.querySelectorAll('.tab').forEach(function (tab) {
+        tab.classList.remove('active');
+    });
+
+    document.getElementById('tab-' + id).classList.add('show');
+    btn.classList.add('active');
+}
